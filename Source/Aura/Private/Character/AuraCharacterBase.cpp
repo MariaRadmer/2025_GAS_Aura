@@ -1,7 +1,7 @@
 // Copyright Maria Radmer & Leah
 
 
-#include "AuraCharacterBase.h"
+#include "Character/AuraCharacterBase.h"
 
 
 AAuraCharacterBase::AAuraCharacterBase()
