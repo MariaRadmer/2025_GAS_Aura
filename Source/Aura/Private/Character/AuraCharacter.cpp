@@ -25,7 +25,7 @@ void AAuraCharacter::PossessedBy(AController* NewController)
 	Super::PossessedBy(NewController);
 
 	// Init ability actor Server
-	//InitAbilityActorInfo();
+	InitAbilityActorInfo();
 }
 
 void AAuraCharacter::OnRep_PlayerState()
@@ -33,16 +33,22 @@ void AAuraCharacter::OnRep_PlayerState()
 	Super::OnRep_PlayerState();
 
 	// Init ability actor Client
-	//InitAbilityActorInfo();
+	InitAbilityActorInfo();
 }
 
 void AAuraCharacter::InitAbilityActorInfo()
 {
 	AAuraPlayerState* playerState = GetPlayerState<AAuraPlayerState>();
-	check(playerState);
-	playerState->GetAbilitySystemComponent()->InitAbilityActorInfo(playerState,this);
+	if (!playerState)
+	{
+	    UE_LOG(LogTemp, Error, TEXT("PlayerState is NULL"));
+		return; 
+	}
 	AbilitySystemComponent = playerState->GetAbilitySystemComponent();
 	AttributeSet = playerState->GetUAttributeSet();
+
+	playerState->GetAbilitySystemComponent()->InitAbilityActorInfo(playerState,this);
+	
 }
 
 

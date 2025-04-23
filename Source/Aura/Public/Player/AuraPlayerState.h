@@ -24,10 +24,10 @@ public:
 	UAttributeSet* GetUAttributeSet() const {return AttributeSet;}
 
 protected:
-	UPROPERTY();
+	UPROPERTY(BlueprintReadOnly,Category="Abilities");
 	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
 
-	UPROPERTY();
+	UPROPERTY(BlueprintReadOnly, Category="Abilities");
 	TObjectPtr<UAttributeSet> AttributeSet;
 
 };

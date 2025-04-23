@@ -4,6 +4,20 @@ Intermediate
 Saved
 Build
 
+# Crash logs and backups
+*.dmp
+*.log
+*.temp
+*.tmp
+*.bak
+
+# Encryption temp folders & compression junk
+*_temp_folder/
+enc_temp_folder/
+__MACOSX/
+*.zip
+*.rar
+
 .vscode
 .vs
 *.VC.db
