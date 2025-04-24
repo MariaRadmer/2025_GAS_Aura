@@ -18,6 +18,7 @@ __MACOSX/
 *.zip
 *.rar
 
+# Visual Studio 
 .vscode
 .vs
 *.VC.db
@@ -28,3 +29,10 @@ __MACOSX/
 *.suo
 *.xcodeproj
 *.xcworkspace
+
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
