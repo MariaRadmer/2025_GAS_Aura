@@ -4,6 +4,16 @@ Intermediate
 Saved
 Build
 
+# Visual Studio 
+.vscode
+.vs
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
 # Crash logs and backups
 *.dmp
 *.log
@@ -18,9 +28,7 @@ __MACOSX/
 *.zip
 *.rar
 
-# Visual Studio 
-.vscode
-.vs
+
 *.VC.db
 *.opensdf
 *.opendb
@@ -29,10 +37,3 @@ __MACOSX/
 *.suo
 *.xcodeproj
 *.xcworkspace
-
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
